@@ -7,11 +7,20 @@
 # Imports
 
 # Body
+def findWords(n):
+	""" Finds words in the input file that are more than n characters in length (excluding whitespaces) 
+	"""
+	file = open("words.txt")
+	for word in file:
+		if(len(word.strip()) > n):
+			print(word)
 
 
 ##############################################################################
 def main():
     pass  # Call your functions here.
+
+    findWords(20)
 
 if __name__ == '__main__':
     main()
