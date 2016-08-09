@@ -16,17 +16,16 @@ def even_odd():
     # Take input from user
     try:
         usrInput = int(input("Enter A Number: "))
-        if(usrInput % 2 == 0):
-            print("The Number is Even")
-        else:
-            print("The Number is Odd")
-
-        return None
     except ValueError:
         print("\nEnter A Valid Number.")
         return None
-    pass
+    
+    if(usrInput % 2 == 0):
+        print("The Number is Even")
+    else:
+        print("The Number is Odd")
 
+    return None
 
 def ten_by_ten():
     """ Prints integers 1 through 100 sequentially in a ten by ten grid."""
@@ -40,9 +39,6 @@ def ten_by_ten():
             print(str(int(row)) + '\t', end='')
 
         print()
-
-    pass
-
 
 def find_average():
     """ Takes numeric input (non-word numerals) from the user, one number
@@ -58,20 +54,19 @@ def find_average():
         # Take input from user. Only float type values
         try:
             usrStrInput = input("Enter A Number: ")
-            if(usrStrInput.lower() == 'done'):
-                break
-            else:
-                usrInput = float(usrStrInput)
-                sumNum = sumNum + usrInput
-                countNum = countNum + 1
-                avg = sumNum/countNum
         except ValueError:
             print("Enter A Valid Number")
             continue
 
-    return avg
-    pass
+        if(usrStrInput.lower() == 'done'):
+            break
+        else:
+            usrInput = float(usrStrInput)
+            sumNum = sumNum + usrInput
+            countNum = countNum + 1
+            avg = sumNum/countNum
 
+    return avg
 
 ##############################################################################
 def main():
@@ -81,8 +76,7 @@ def main():
     Prints the following function:
         - find_average()
     """
-    pass
-    
+
     even_odd()
     
     ten_by_ten()
